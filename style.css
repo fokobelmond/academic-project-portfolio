@@ -348,26 +348,38 @@ a:hover {
 }
 
 .photo-profil {
-    width: 220px;
-    height: 220px;
+    width: 240px;
+    height: 300px; /* Plus haut que large → vrai ovale élégant */
     object-fit: cover;
-    object-position: center 1%;
-    border: 5px solid var(--bleu-lavande);
-    /* Cette valeur crée une forme organique asymétrique */
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    box-shadow: 
-        0 0 40px var(--glow-lavande),
-        0 15px 50px var(--ombre-profonde);
-    transition: all var(--transition-base);
+    object-position: center;
+
+    border-radius: 50% / 40%; /* Ovale vertical propre */
+    
+    border: 3px solid rgba(255, 255, 255, 0.2);
+
+    background: linear-gradient(
+        135deg,
+        rgba(180, 140, 255, 0.3),
+        rgba(120, 80, 255, 0.15)
+    );
+
+    box-shadow:
+        0 0 40px rgba(160, 120, 255, 0.6),
+        0 20px 60px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.4s ease;
 }
 
 .photo-profil:hover {
-    transform: scale(1.05);
-    /* La forme s'adoucit légèrement au survol */
-    border-radius: 40% 60% 50% 50% / 50% 50% 40% 60%;
-    box-shadow: 
-        0 0 60px var(--glow-lavande),
-        0 20px 60px var(--ombre-profonde);
+    transform: scale(1.06);
+
+    border-radius: 50% / 35%;
+
+    box-shadow:
+        0 0 70px rgba(180, 140, 255, 0.9),
+        0 25px 80px rgba(0, 0, 0, 0.5);
 }
 
 /* Colonne droite : Texte aligné à gauche */
