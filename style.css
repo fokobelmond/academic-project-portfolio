@@ -348,8 +348,8 @@ a:hover {
 }
 
 .photo-profil {
-    width: 320px;
-    height: 220px; /* Plus large que haut */
+    width: 500px;
+    height: 250px; /* Plus large que haut */
 
     object-fit: cover;
     object-position: center;
