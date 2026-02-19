@@ -347,34 +347,27 @@ a:hover {
     position: relative;
 }
 
-.photo-profil {
-    width: 200px;
-    height: 190px; /* Plus large que haut */
-
+photo-profil {
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-    object-position: center;
-
-    /* Ovale horizontal asymétrique contemporain */
-    border-radius: 65% 35% 60% 40% / 55% 60% 40% 45%;
-
-    border: 3px solid rgba(180, 140, 255, 0.4);
-
-    box-shadow:
-        0 0 50px rgba(160, 120, 255, 0.5),
-        0 20px 60px rgba(0, 0, 0, 0.4);
-
-    transition: all 0.5s cubic-bezier(.19,1,.22,1);
+    object-position: center 1%;
+    border: 5px solid var(--bleu-lavande);
+    /* Cette valeur crée une forme organique asymétrique */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    box-shadow: 
+        0 0 40px var(--glow-lavande),
+        0 15px 50px var(--ombre-profonde);
+    transition: all var(--transition-base);
 }
 
 .photo-profil:hover {
     transform: scale(1.05);
-
-    /* L'ovale se "rééquilibre" subtilement */
-    border-radius: 55% 45% 50% 50% / 50% 55% 45% 50%;
-
-    box-shadow:
-        0 0 80px rgba(180, 140, 255, 0.8),
-        0 30px 80px rgba(0, 0, 0, 0.5);
+    /* La forme s'adoucit légèrement au survol */
+    border-radius: 40% 60% 50% 50% / 50% 50% 40% 60%;
+    box-shadow: 
+        0 0 60px var(--glow-lavande),
+        0 20px 60px var(--ombre-profonde);
 }
 
 
