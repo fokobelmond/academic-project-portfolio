@@ -348,39 +348,35 @@ a:hover {
 }
 
 .photo-profil {
-    width: 240px;
-    height: 300px; /* Plus haut que large → vrai ovale élégant */
+    width: 320px;
+    height: 220px; /* Plus large que haut */
+
     object-fit: cover;
     object-position: center;
 
-    border-radius: 50% / 40%; /* Ovale vertical propre */
-    
-    border: 3px solid rgba(255, 255, 255, 0.2);
+    /* Ovale horizontal asymétrique contemporain */
+    border-radius: 65% 35% 60% 40% / 55% 60% 40% 45%;
 
-    background: linear-gradient(
-        135deg,
-        rgba(180, 140, 255, 0.3),
-        rgba(120, 80, 255, 0.15)
-    );
+    border: 3px solid rgba(180, 140, 255, 0.4);
 
     box-shadow:
-        0 0 40px rgba(160, 120, 255, 0.6),
+        0 0 50px rgba(160, 120, 255, 0.5),
         0 20px 60px rgba(0, 0, 0, 0.4);
 
-    backdrop-filter: blur(10px);
-
-    transition: all 0.4s ease;
+    transition: all 0.5s cubic-bezier(.19,1,.22,1);
 }
 
 .photo-profil:hover {
-    transform: scale(1.06);
+    transform: scale(1.05);
 
-    border-radius: 50% / 35%;
+    /* L'ovale se "rééquilibre" subtilement */
+    border-radius: 55% 45% 50% 50% / 50% 55% 45% 50%;
 
     box-shadow:
-        0 0 70px rgba(180, 140, 255, 0.9),
-        0 25px 80px rgba(0, 0, 0, 0.5);
+        0 0 80px rgba(180, 140, 255, 0.8),
+        0 30px 80px rgba(0, 0, 0, 0.5);
 }
+
 
 /* Colonne droite : Texte aligné à gauche */
 .hero-right {
