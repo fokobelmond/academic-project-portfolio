@@ -353,7 +353,8 @@ a:hover {
     object-fit: cover;
     object-position: center 1%;
     border: 5px solid var(--bleu-lavande);
-    border-radius: 50%;
+    /* Cette valeur crée une forme organique asymétrique */
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     box-shadow: 
         0 0 40px var(--glow-lavande),
         0 15px 50px var(--ombre-profonde);
@@ -362,6 +363,8 @@ a:hover {
 
 .photo-profil:hover {
     transform: scale(1.05);
+    /* La forme s'adoucit légèrement au survol */
+    border-radius: 40% 60% 50% 50% / 50% 50% 40% 60%;
     box-shadow: 
         0 0 60px var(--glow-lavande),
         0 20px 60px var(--ombre-profonde);
